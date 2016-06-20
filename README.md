@@ -1,21 +1,21 @@
 # SloneDB
 Wrapper for game database.  Do all sqlite call through this wrapper if you can.  Extend functionality here, rather than work around it elsewhere.
 
+## License
+This code is freely available to you via the [WTFPL License](https://en.wikipedia.org/wiki/WTFPL)
+
 ### NOTE 1
-For this to work in a built game, you have to change the API compatibility level to ".Net 2.0" instead of ".Net 2.0 Subset" and copy Mono.Data.dll and Mono.Data.Sqlite.dll into Plugins.
+For this to work in a built game, you have to change the API compatibility level to ".Net 2.0" instead of ".Net 2.0 Subset" and copy System.Data.dll and Mono.Data.Sqlite.dll into the Plugins folder for your project.  These files can be found online.
 
 ### NOTE 2
-You must find the appropriate sqlite3.dll and sqlite3.def files for your platform (x86 and/or x64) and place them in your plugins folder.  This will not work without that.  In many cases you may need to get both, assign the x64 version to be used by the editor, and assign the x86 version to be used by your Player.
+You must search online to find the appropriate sqlite3.dll and sqlite3.def files for your platform (x86 and/or x64) and place them in your plugins folder.  This will not work without that.  In many cases you may need to get both, assign the x64 version to be used by the editor, and assign the x86 version to be used by your Player.
 
 ## Enums
 
 ### DBFieldType
-#### INT
-64-bit integer field.  Will be stored and retrieved as a 'long' and can be safely cast to 'int' if necessary.  This entry should also be used to store dates.
-#### TEXT
-Unbounded text field for longer text entries.
-#### VARCHAR
-Bounded text field for shorter text entries.  Requires user to specify a size, which will be the maximum number of characters for the field.
+* **INT** - 64-bit integer field.  Will be stored and retrieved as a 'long' and can be safely cast to 'int' if necessary.  This entry should also be used to store dates.
+* **TEXT** - Unbounded text field for longer text entries.
+* **VARCHAR** - Bounded text field for shorter text entries.  Requires user to specify a size, which will be the maximum number of characters for the field.
 
 ### DBConditionType
 Used to describe the type of condition being executed.  Equals for straight equality, or other conditions, such as less than, greater than, etc, for other comparison conditions.
