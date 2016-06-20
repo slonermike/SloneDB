@@ -651,6 +651,18 @@ public class SloneDB : MonoBehaviour {
 		return res;
 	}
 
+	// Execute a non-selection query from raw SQL.
+	// 
+	// sql: the SQL query to execute.
+	// 
+	// Returns the number of rows affected.
+	public int ExecuteRawNonQuery(string query)
+	{
+		QueryDebug(query);
+		SqliteCommand cmd = new SqliteCommand(query, dbConnection);
+		return cmd.ExecuteNonQuery();
+	}
+
 	// Execute a selection query from a DBQuery object.
 	//
 	public DBResult ExecuteQuery(DBQuery query)
