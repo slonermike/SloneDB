@@ -1,5 +1,5 @@
 # SloneDB
-Wrapper for game database.  Do all sqlite call through this wrapper if you can.  Extend functionality here, rather than work around it elsewhere.
+Wrapper for locally-stored game database.
 
 ## License
 This code is freely available to you via the [WTFPL License](https://en.wikipedia.org/wiki/WTFPL)
