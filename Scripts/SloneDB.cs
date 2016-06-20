@@ -514,7 +514,6 @@ public class SloneDB : MonoBehaviour {
 				_inst = GameObject.FindObjectOfType<SloneDB> ();
 				if (_inst == null) {
 					GameObject o = new GameObject ();
-					GameObject.DontDestroyOnLoad (o);
 					_inst = o.AddComponent<SloneDB> ();
 					_inst.CreateDB ();
 				}
