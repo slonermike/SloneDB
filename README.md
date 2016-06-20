@@ -10,6 +10,9 @@ For this to work in a built game, you have to change the API compatibility level
 ### NOTE 2
 You must search online to find the appropriate sqlite3.dll and sqlite3.def files for your platform (x86 and/or x64) and place them in your plugins folder.  This will not work without that.  In many cases you may need to get both, assign the x64 version to be used by the editor, and assign the x86 version to be used by your Player.
 
+## Example
+To see how to set up a table, insert, update, select, and delete from it, check out the example in the TestSloneDB scene.
+
 ## Enums
 
 ### DBFieldType
