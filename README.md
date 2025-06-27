@@ -2,7 +2,7 @@
 Wrapper for locally-stored game database.
 
 ## License
-This code is freely available to you via the [WTFPL License](https://en.wikipedia.org/wiki/WTFPL)
+This code is freely available to you via the [MIT License](https://mit-license.org/)
 
 ### NOTE 1
 For this to work in a built game, you have to change the API compatibility level to ".Net 2.0" instead of ".Net 2.0 Subset" and copy System.Data.dll and Mono.Data.Sqlite.dll into the Plugins folder for your project.  These files can be found online.
